@@ -15,6 +15,14 @@ class BasePage {
     return cy.get(".mat-simple-snack-bar-content");
   }
 
+  static get submitButton(){
+    return cy.get("#submitButton");
+  }
+
+  static get rows() {
+    return cy.get("mat-row");
+  }
+
   static visit(options) {
     options = {
       timeout: Cypress.config("defaultCommandTimeout"),
